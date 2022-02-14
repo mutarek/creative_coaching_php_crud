@@ -16,6 +16,7 @@ include "header.php";
         <th>Name</th>
          <th>Number</th>
         <th>Address</th>
+        <th>Action</th>
         </thead>
         <tbody>
             <?php 
@@ -26,6 +27,10 @@ include "header.php";
                 <td><?php echo $eachdata['t_name']; ?></td>
                 <td><?php echo $eachdata['t_number']; ?></td>
                 <td><?php echo $eachdata['t_address']; ?></td>
+                <td>
+                    <a href="edittrainer.php?tid=<?php echo $eachdata['t_id']; ?>">Edit</a>
+                    <a href="deletetrainer.php?trainer_id=<?php echo $eachdata['t_id']; ?>">Delete</a>
+                </td>
             </tr>
             <?php } ?>
         </tbody>

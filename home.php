@@ -17,6 +17,7 @@ include "header.php";
         <th>Number</th>
         <th>Course</th>
         <th>Trainer</th>
+        <th>Action</th>
         </thead>
         <tbody>
             <?php 
@@ -29,6 +30,10 @@ include "header.php";
                 <td><?php echo $student['s_number']; ?></td>
                 <td><?php echo $student['c_name']; ?></td>
                 <td><?php echo $student['t_name']; ?></td>
+                <td>
+                    <a href="editstudent.php?sid=<?php echo $student['s_id']; ?>">Edit</a>
+                    <a href="">Delete</a>
+                </td>
             </tr>
             <?php } ?>
         </tbody>

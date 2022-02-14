@@ -16,6 +16,7 @@ include "header.php";
         <th>Course</th>
          <th>Price</th>
         <th>Trainer</th>
+        <th>Action</th>
         </thead>
         <tbody>
             <?php 
@@ -27,6 +28,10 @@ include "header.php";
                 <td><?php echo$course['c_name']; ?></td>
                 <td><?php echo$course['c_price'].$bdt; ?></td>
                 <td><?php echo$course['t_name']; ?></td>
+                <td>
+                    <a href="editcourse.php?cid=<?php echo$course['c_id']; ?>">Edit</a>
+                    <a href="deletecourse.php?courseid=<?php echo$course['c_id']; ?>">Delete</a>
+                </td>
             </tr>
             <?php }  ?>
         </tbody>
